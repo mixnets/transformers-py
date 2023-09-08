@@ -30,3 +30,5 @@ def run():
 
     sf.write("speech.wav", speech.numpy(), samplerate=16000)
 
+
+run()
