@@ -20,6 +20,7 @@ def run():
     model = SpeechT5ForTextToSpeech.from_pretrained("microsoft/speecht5_tts", )
     vocoder = SpeechT5HifiGan.from_pretrained("microsoft/speecht5_hifigan", )
     input = readInput()
+    print(f"input=>{input}")
     inputs = processor(text=input, return_tensors="pt")
 
     # load xvector containing speaker's voice characteristics from a dataset
